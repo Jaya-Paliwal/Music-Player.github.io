@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@500&family=Lato:ital,wght@1,900&family=Lobster&family=Murecho:wght@400;600&family=Potta+One&display=swap');
+
+*,
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  font-family: 'Domine', serif;
+   background-color: whitesmoke;
+}
+.body{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.music-container{
+  width: 35rem;
+  height: 55rem;
+  border-radius: 2rem;
+  box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  text-align: center;
+  background-color: rgb(215, 236, 255);
+  background-image: linear-gradient(to bottom, rgba(13, 8, 17, 0), rgb(89, 61, 131));
+}
+ /* topbar-start */
+.topbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 5rem;
+  margin-bottom: 1rem;
+  color: rgb(33, 13, 51);
+}
+.icons{
+ font-size: 2.3rem;
+ cursor: pointer;
+}
+#ico{
+  font-size: 2.3rem;
+}
+.icons:hover{
+  color: rgb(185, 60, 168);
+  font-weight: bold;
+  font-size:2.5rem ;
+}
+#ico:hover{
+  color: rgb(185, 60, 168);
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.playing{
+  font-size: 2rem;
+  margin-top: 0.3rem;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.5rem;
+}
+/* song-info-start */
+.music-container #name{
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.5rem;
+  color: white;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+.music-container #details{
+  color: whitesmoke;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  font-weight: bolder;
+}
+/* img-start */
+.img{
+  width: 22rem;
+  height: 22rem;
+  margin: auto;
+  border-radius:50%;
+  background-image: url(Images/song.png);
+}
+img{
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 1.2rem;
+  box-shadow:0 1.0rem 2rem 0.2rem rgba(0, 0, 0, 0.2) ;
+}
+/* control-start */
+.song-control{
+width: 20rem;
+display: flex;
+justify-content: space-between;
+margin: auto;
+margin-top: 1rem;
+align-items: center;
+}
+.song-control .fas{
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  filter: drop-shadow(0 0.1rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
+}
+.song-control .stop-play{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: rgb(97, 26, 144);
+  color: white;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* hovereffect-start */
+.song-control .fas:hover{
+  color: rgb(97, 26, 144);
+  ;
+}
+.song-control .stop-play:hover{
+  background-color: white;
+  color: rgb(97, 26, 144);
+  box-shadow: 0 1rem 2rem 0.2rem rgba(0, 0, 0, 0.4);
+}
+/* animation-start */
+.animations{
+  animation: rotatePlayer 3s linear infinite;
+}
+@keyframes rotatePlayer{
+  from{transform: rotate(0deg);  
+  }
+  to{transform: rotate(360deg);  
+  }
+}
+/* progress-bar-start */
+.progress-container{
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+  margin-top:1rem ;
+}
+.progress{
+  width: 100%;
+  height: 0.5rem;
+  box-shadow:  0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),  0 4px 8px rgba(0, 0, 0, 0.07),  0 8px 16px rgba(0, 0, 0, 0.07),  0 16px 32px rgba(0, 0, 0, 0.07),  0 32px 64px rgba(0, 0, 0, 0.07); 
+border-radius: 4rem;
+position: relative;
+margin-top: 0.5rem;
+transition: all 1s linear;
+-moz-transition: all 1s linear;
+-o-transition: all 1s linear;
+-webkit-transition: all 1s linear;
+cursor: pointer;
+-webkit-appearance: none;
+appearance: none;
+}
+.pro{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: seashell;
+  border-radius: 4rem;
+cursor: pointer;
+-webkit-appearance: none;
+appearance: none;
+}
+.duration{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#player{
+  display: flex;
+  justify-content:  space-around;
+}
+.volume-container{
+  width: 50%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+.fa{
+  font-size: 1.5rem;
+  color: rgb(52, 57, 109);
+  cursor: pointer;
+}
+.fa:hover{
+  color: whitesmoke;
+  font-size: 1.9rem;
+}
+.volume{
+  width: 100%;
+  height: 0.5rem;
+  box-shadow:  0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),  0 4px 8px rgba(0, 0, 0, 0.07),  0 8px 16px rgba(0, 0, 0, 0.07),  0 16px 32px rgba(0, 0, 0, 0.07),  0 32px 64px rgba(0, 0, 0, 0.07); 
+border-radius: 4rem;
+position: relative;
+margin-top: 0.5rem;
+transition: all 1s linear;
+-moz-transition: all 1s linear;
+-o-transition: all 1s linear;
+-webkit-transition: all 1s linear;
+cursor: pointer;
+-webkit-appearance: none;
+appearance: none;
+}
+.pros{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  background-color: seashell;
+  border-radius: 4rem;
+cursor: pointer;
+-webkit-appearance: none;
+appearance: none;
+}
+.durations{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

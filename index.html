@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Player</title>
+<link rel="stylesheet" href="style.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="body">
+        <div class="music-container">
+            <!-- topbar-start -->
+            <div class="topbar">
+                <i class='far fa-heart icons'></i>
+                <p class="playing">Now Playing</p>
+                <i class="fa fa-share-alt icons" id="ico"></i>
+            </div>
+            <!-- topbar-End -->
+            <!-- volume-start -->
+            <div id="player">
+                <i class="fas fa-volume-mute fa" onclick="pauseAudio()" title="Mute" id="mute"></i>
+                <div class="volume-container" id="volume-container">
+                    <div class="durations">
+                    </div>
+                    <div class="volume" id="volume">
+                        <div class="pros" id="pros"></div>
+                    </div>
+                </div>
+                <i class="fa fa-volume-up" onclick="playAudio()" title="Full-Volume" id="Full-Volume"></i>
+            </div>
+            <!-- volume-end -->
+            <!-- image-start -->
+            <div class="img">
+                <img class="imgs" src="Images/song-1.jpg" alt="album pic"></div>
+                <!-- topbar-end -->
+                <!-- song-info-start -->
+                <h1 id="name">Yeh Raaten Yeh Mausam</h1>
+                <h2 id="details">Sanam</h2>    
+                <!-- song-info-end -->  
+                <!-- song-start -->      
+            <audio src="Music/song-1.mp3" type="audio/ogg"></audio>
+              <!-- song-end --> 
+                <!-- progress-bar-start --> 
+            <div class="progress-container" id="progress-container">
+                <div class="duration">
+                    <div id="time">0.00</div>
+                    <div id="timeing">3.39</div>
+                </div>
+                <div class="progress" id="progress">
+                    <div class="pro" id="pro"></div>
+                </div>
+            </div>
+               <!-- progress-bar-end --> 
+                  <!-- control-start --> 
+            <div class="song-control">
+                <i class='fas fa-backward' id="previous" title="Previous"></i>
+                <i class='fas fa-play stop-play' id="play" title="Play"></i>
+                <i class='fas fa-forward' id="next" title="Next"></i>
+            </div>
+            <!-- control-end --> 
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
